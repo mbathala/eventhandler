@@ -6,7 +6,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
 import com.wf.eh.EventhandlerApplication;
-import com.wf.eh.avro.model.TennisScore;
+import com.wf.avro.model.TennisScore;
 
 import lombok.extern.slf4j.Slf4j;
 

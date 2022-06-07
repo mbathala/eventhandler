@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.wf.eh.avro.model.TennisScore;
+import com.wf.avro.model.TennisScore;
 import com.wf.eh.producer.TennisScoreProducer;
 
 @RestController
@@ -18,11 +18,11 @@ public class TennisScoreController {
 	@RequestMapping(method = RequestMethod.GET, value = "/score")
 	public String sendTennisScore() {
 		TennisScore tscore = TennisScore.newBuilder()
-		.setPlayerName("Mirja")
-		.setScore("Eight")
+		.setPlayerName("Sania")
+		.setScore(123)
 		.build();
 		tennisScoreProducer.produce(tscore);
-		return "Sending Tennis Score......";
+		return "Sending Tennis Score latest......";
 	}
 
 }
